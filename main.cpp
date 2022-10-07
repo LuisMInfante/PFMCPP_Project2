@@ -86,14 +86,12 @@ void variableDeclarations()
 	unsigned fluidOunces = 2; 
 	unsigned grapes = 0;
 
-	ignoreUnused(myAge, numberOfCats, carType, letter, grade, group, isCarRunning, off, jumping, temperature, taxRate, christmasBonus, volume, commission, divisor, exitGroup, fluidOunces, grapes);
-	
 	//example:
-    //int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
+    int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
 
-    
-    //ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+	//passing each variable declared to the ignoreUnused() function
+	ignoreUnused(myAge, numberOfCats, carType, letter, grade, group, isCarRunning, off, jumping, temperature, taxRate, christmasBonus, volume, commission, divisor, exitGroup, fluidOunces, grapes, number);
+
 }
 
 /*
@@ -101,11 +99,11 @@ void variableDeclarations()
  example:
  note: this example shows the result after completing steps 3-8
  */
-/*bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
+bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
 { 
 	ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
-} */
+} 
 
 /*
  1) 
@@ -203,10 +201,10 @@ bool continueHomework (bool motivationLevel, double timeLeft)
 int main()
 {
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
-    //auto carRented = rentACar(6, 2); 
+    auto carRented = rentACar(6, 2); 
     
     //1)
- 	ejectSeat(343.5f, 3);
+	ejectSeat(343.5f, 3);
     //2)
 	auto iceCreamPurchase = purchaseIceCream (2, 2, true); 
     //3)
@@ -226,8 +224,8 @@ int main()
     //10)
     auto doHomework = continueHomework (true, 30.50);
 		
-	ignoreUnused(ejectSeat, iceCreamPurchase, totalGrade, topFiveRankings, purchase, masterLevel, initiateGreeting, currentEpisode, milesPerGallon, doHomework);
-    //ignoreUnused(carRented);
+	ignoreUnused(carRented, ejectSeat, iceCreamPurchase, totalGrade, topFiveRankings, purchase, masterLevel, initiateGreeting, currentEpisode, milesPerGallon, doHomework);
+
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
