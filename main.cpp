@@ -16,12 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
+ Integer
+ Character
+ Boolean
+ Floating Point
+ Double
+ Unsigned int
  
  
  
@@ -58,16 +58,40 @@ video: Chapter 2 - Part 3
  
 10) click the [run] button.  Clear up any errors or warnings as best you can.
  */
-
+	
 //2)
 void variableDeclarations()
 {
+    int myAge = 25;
+    int numberOfCats = 2;
+    int carType = 3;
+    
+    char letter = 'a';
+    char grade = 'f';
+    char group = 'c';
+    
+    bool isCarRunning = true;
+    bool off = false;
+    bool jumping = true;
+    
+    float temperature = 29.5f;
+    float taxRate = 7.0f;
+    float christmasBonus = 2000.52f;
+    
+    double volume = 35.65;
+    double commission = 20.00;
+    double divisor = 6.2;
+        
+    unsigned exitGroup = 7;
+    unsigned fluidOunces = 2; 
+    unsigned grapes = 0;
+    
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     
+    //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(myAge, numberOfCats, carType, letter, grade, group, isCarRunning, off, jumping, temperature, taxRate, christmasBonus, volume, commission, divisor, exitGroup, fluidOunces, grapes, number);
 
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -76,50 +100,89 @@ void variableDeclarations()
  note: this example shows the result after completing steps 3-8
  */
 bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
-{ 
+{
     ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
 } 
 
 /*
- 1)
- */
-
+ 1) 
+*/
+void ejectSeat(float speedOfEjection, int ejectionDelay)
+{
+    ignoreUnused(speedOfEjection, ejectionDelay);
+}
 /*
  2)
  */
-
+bool purchaseIceCream (int numberOfCones = 1, int numberOfFlavors = 1, bool specialtyCone = false)
+{
+    ignoreUnused(numberOfCones, numberOfFlavors, specialtyCone);
+    return {};
+}
 /*
  3)
  */
-
+float calculateTotalGrade (float assignmentOneGrade, float assignmentTwoGrade, float assignmentThreeGrade, float assignmentFourGrade)
+{
+    ignoreUnused(assignmentOneGrade, assignmentTwoGrade, assignmentThreeGrade, assignmentFourGrade);
+    return {};
+}
 /*
  4)
  */
-
+int createTopFiveRankings (int rankOne, int rankTwo, int rankThree, int rankFour, int rankFive)
+{
+    ignoreUnused(rankOne, rankTwo, rankThree, rankFour, rankFive);
+    return {};
+}
 /*
  5)
  */
-
+bool buyAMacbook (double macbookPrice = 1999.99, double salesTax = 0.77, bool spaceGray = true)
+{
+    ignoreUnused(macbookPrice, salesTax, spaceGray);
+    return {};
+}
 /*
  6)
  */
-
+int setMasterLevel (int volumeLevel = 0)
+{
+    ignoreUnused(volumeLevel);
+    return {};
+}
 /*
  7)
  */
-
+void initiateGreeting(bool isFriendly)
+{
+    ignoreUnused(isFriendly);
+}
 /*
  8)
  */
-
+int createOnePieceEpisodeTracker(int episodeNumber = 1)
+{
+    ignoreUnused(episodeNumber);
+    return {};
+}
 /*
  9)
  */
-
+float viewFuelEconomy (float milesPerGallon, float gallonsInTank, float milesDriven, float timeDriven = 1.f)
+{
+    ignoreUnused(milesPerGallon, gallonsInTank, milesDriven, timeDriven);
+    return {};
+}
 /*
  10)
  */
+bool continueHomework (bool motivationLevel, double timeLeft)
+{
+    ignoreUnused(motivationLevel, timeLeft);
+    return{};
+}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -137,31 +200,32 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 
 int main()
 {
-    //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
+//example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    ejectSeat(343.5f, 3);
     //2)
-    
+    auto iceCreamPurchase = purchaseIceCream (2, 2, true); 
     //3)
-    
+    auto totalGrade = calculateTotalGrade (85.4f, 98.0f, 70.69f, 92.6f);
     //4)
-    
+    auto topFiveRankings = createTopFiveRankings (3, 1, 4, 2, 5);
     //5)
-    
+    auto purchase = buyAMacbook ();
     //6)
-    
+    auto masterLevel = setMasterLevel (-20);
     //7)
-    
+    initiateGreeting(false);
     //8)
-    
+    auto currentEpisode = createOnePieceEpisodeTracker(598);
     //9)
-    
+    auto milesPerGallon = viewFuelEconomy (36.9f, 10.8f, 300.25f, 1.f);
     //10)
+    auto doHomework = continueHomework (true, 30.50);
     
+    ignoreUnused(carRented, ejectSeat, iceCreamPurchase, totalGrade, topFiveRankings, purchase, masterLevel, initiateGreeting, currentEpisode, milesPerGallon, doHomework);
     
-    ignoreUnused(carRented);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
