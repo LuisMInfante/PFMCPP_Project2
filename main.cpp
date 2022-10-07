@@ -62,32 +62,32 @@ video: Chapter 2 - Part 3
 //2)
 void variableDeclarations()
 {
-	int myAge = 25;
-	int numberOfCats = 2;
-	int carType = 3;
-	
-	char letter = 'a';
-	char grade = 'f';
-	char group = 'c';
-	
-	bool isCarRunning = true;
-	bool off = false;
-	bool jumping = true;
-
-	float temperature = 29.5f;
-	float taxRate = 7.0f;
-	float christmasBonus = 2000.52f;
-
-	double volume = 35.65;
-	double commission = 20.00;
-	double divisor = 6.2;
-
-	unsigned exitGroup = 7;
-	unsigned fluidOunces = 2; 
-	unsigned grapes = 0;
+    int myAge = 25;
+    int numberOfCats = 2;
+    int carType = 3;
+    
+    char letter = 'a';
+    char grade = 'f';
+    char group = 'c';
+    
+    bool isCarRunning = true;
+    bool off = false;
+    bool jumping = true;
+    
+    float temperature = 29.5f;
+    float taxRate = 7.0f;
+    float christmasBonus = 2000.52f;
+    
+    double volume = 35.65;
+    double commission = 20.00;
+    double divisor = 6.2;
+    
+    unsigned exitGroup = 7;
+    unsigned fluidOunces = 2; 
+    unsigned grapes = 0;
 
 	//example:
-    	int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
+    int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
 
 	//passing each variable declared to the ignoreUnused() function
 	ignoreUnused(myAge, numberOfCats, carType, letter, grade, group, isCarRunning, off, jumping, temperature, taxRate, christmasBonus, volume, commission, divisor, exitGroup, fluidOunces, grapes, number);
