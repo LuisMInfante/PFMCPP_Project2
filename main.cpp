@@ -87,7 +87,7 @@ void variableDeclarations()
 	unsigned grapes = 0;
 
 	//example:
-    int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
+    	int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
 
 	//passing each variable declared to the ignoreUnused() function
 	ignoreUnused(myAge, numberOfCats, carType, letter, grade, group, isCarRunning, off, jumping, temperature, taxRate, christmasBonus, volume, commission, divisor, exitGroup, fluidOunces, grapes, number);
@@ -101,7 +101,7 @@ void variableDeclarations()
  */
 bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
 { 
-	ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
+ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
 } 
 
@@ -204,9 +204,9 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-	ejectSeat(343.5f, 3);
+ejectSeat(343.5f, 3);
     //2)
-	auto iceCreamPurchase = purchaseIceCream (2, 2, true); 
+auto iceCreamPurchase = purchaseIceCream (2, 2, true); 
     //3)
     auto totalGrade = calculateTotalGrade (85.4f, 98.0f, 70.69f, 92.6f);
     //4)
@@ -224,7 +224,7 @@ int main()
     //10)
     auto doHomework = continueHomework (true, 30.50);
 		
-	ignoreUnused(carRented, ejectSeat, iceCreamPurchase, totalGrade, topFiveRankings, purchase, masterLevel, initiateGreeting, currentEpisode, milesPerGallon, doHomework);
+ignoreUnused(carRented, ejectSeat, iceCreamPurchase, totalGrade, topFiveRankings, purchase, masterLevel, initiateGreeting, currentEpisode, milesPerGallon, doHomework);
 
     std::cout << "good to go!" << std::endl;
     return 0;    
